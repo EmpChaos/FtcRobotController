@@ -97,6 +97,7 @@ public class PushbotAutoDriveToLine_Linear extends LinearOpMode {
             telemetry.addData("Light Level", lightSensor.getLightDetected());
             telemetry.update();
             idle();
+
         }
 
         // Start the robot moving forward, and then begin looking for a white line.
