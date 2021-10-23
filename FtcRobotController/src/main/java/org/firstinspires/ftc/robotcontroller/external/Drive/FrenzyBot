@@ -27,8 +27,9 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package org.firstinspires.ftc.robotcontroller.external.samples;
+package org.firstinspires.ftc.robotcontroller.external.Drive;
 
+import com.qualcomm.hardware.bosch.BNO055IMU;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
@@ -83,6 +84,7 @@ public class FrenzyBot()
         // Set all motors to zero power
         setAllPower(0);
 
+
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
         left.setMode(DcMotor.RunMode.RUN_USING_ENCODERS);
@@ -117,12 +119,12 @@ public class FrenzyBot()
             setMotorPower(p,p,p,p,p);
         }
 
-        public void setMotorPower(double lF, double rF, double lB, double rB, double aE){
-            leftFront.setPower(lF);
-            leftBack.setPower(lB);
-            rightBack.setPower(rB);
-            rightFront.setPower(rF);
-            armExtend.setPower(aE);
+        public void setMotorPower(double left, double right, double leftBack, double rightBack, double arm){
+            left.setPower(left);
+            leftBack.setPower(leftBack);
+            rightBack.setPower(rightBack);
+            right.setPower(right);
+            armExtend.setPower(arm);
     }
     }
 }
